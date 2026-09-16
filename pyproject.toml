@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dota-player-analyzer"
+version = "1.0.0"
+description = "Local Dotabuff/OpenDota player analyzer with evidence-based PDF reports"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "beautifulsoup4>=4.12,<5",
+  "httpx>=0.27,<1",
+  "lxml>=5,<7",
+  "matplotlib>=3.9,<4",
+  "numpy>=2,<3",
+  "pandas>=2.2,<3",
+  "reportlab>=4.2,<5",
+]
+
+[project.optional-dependencies]
+browser = ["playwright>=1.46,<2"]
+dev = ["pytest>=8,<9", "pyyaml>=6,<7"]
+
+[project.scripts]
+dota-analyzer = "dota_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Dota Player Analysis"
+  short_description: "Глубокий анализ игроков Dota 2 и PDF"
+  default_prompt: "Use $dota-player-analysis to analyze this Dotabuff player and generate a PDF report."
+
