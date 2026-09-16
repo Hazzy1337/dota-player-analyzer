@@ -11,10 +11,10 @@ __pycache__/
 .mypy_cache/
 build/
 dist/
-output/
-output-*/
-cache/
-raw/
+/output/
+/output-*/
+/cache/
+/raw/
 *.log
 *.db
 *.db-*
